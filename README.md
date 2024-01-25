@@ -101,7 +101,7 @@ Replace `username` and `password` with the credentials of the allowed users.
 ### Adding a new book
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <access_token>" -d '{"title": "Book Title", "author": "Author Name", "ISBN": "1234567890", "price": 10.99, "quantity": 5}' https://mushy-bathing-suit-foal.cyclic.app/api/books
+curl -X POST -H "Content-Type: application/json" -H "Authorization: <access_token>" -d "{\"title\": \"Book Title\", \"author\": \"Author Name\", \"ISBN\": \"1234567890\", \"price\": 10.99, \"quantity\": 5}" https://mushy-bathing-suit-foal.cyclic.app/api/books
 ```
 
 ### Retrieving all books
