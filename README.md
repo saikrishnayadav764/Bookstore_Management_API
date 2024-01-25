@@ -121,7 +121,7 @@ Replace `:id` with the actual ISBN of the book you want to retrieve.
 ### Updating book details
 
 ```bash
-curl -X PUT "https://mushy-bathing-suit-foal.cyclic.app/api/notes/:id" -H "Content-Type: application/json" -H "Authorization: Bearer <Token>" -d '{"title": "Updated Note", "content": "This note has been updated."}'
+curl -X PUT "https://mushy-bathing-suit-foal.cyclic.app/api/books/:id" -H "Content-Type: application/json" -H "Authorization: Bearer <Token>" -d '{"title": "Updated Note", "content": "This note has been updated."}'
 ```
 
 Replace `:id` with the actual ISBN of the book you want to update.
