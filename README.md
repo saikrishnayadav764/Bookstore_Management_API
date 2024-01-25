@@ -92,46 +92,46 @@ Execute these `curl` commands in your terminal to interact with the API endpoint
 ### Obtain Token (Login)
 
 ```bash
-curl -X POST "http://localhost:3000/api/login" -H "Content-Type: application/json" -d "{\"username\": \"user1\", \"password\": \"password1\"}"
+curl -X POST "https://mushy-bathing-suit-foal.cyclic.app/api/login" -H "Content-Type: application/json" -d "{\"username\": \"user1\", \"password\": \"password1\"}"
 ```
 
 Replace `username` and `password` with the credentials of the allowed users.
 
-### Create a Note
+### Adding a new book
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <access_token>" -d '{"title": "Book Title", "author": "Author Name", "ISBN": "1234567890", "price": 10.99, "quantity": 5}' http://localhost:5000/api/books
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <access_token>" -d '{"title": "Book Title", "author": "Author Name", "ISBN": "1234567890", "price": 10.99, "quantity": 5}' https://mushy-bathing-suit-foal.cyclic.app/api/books
 ```
 
-### Get All Notes
+### Retrieving all books
 
 ```bash
-curl -X GET -H "Authorization: Bearer <access_token>" http://localhost:5000/api/books
+curl -X GET -H "Authorization: Bearer <access_token>" https://mushy-bathing-suit-foal.cyclic.app/api/books
 ```
 
-### Get a Specific Note by ID
+### Retrieving a specific book by ISBN
 
 ```bash
-curl -X GET -H "Authorization: Bearer <access_token>" http://localhost:5000/api/books/:id
+curl -X GET -H "Authorization: Bearer <access_token>" https://mushy-bathing-suit-foal.cyclic.app/api/books/:id
 ```
 
-Replace `:id` with the actual ID of the note you want to retrieve.
+Replace `:id` with the actual ISBN of the book you want to retrieve.
 
-### Update a Note by ID
+### Updating book details
 
 ```bash
-curl -X PUT "http://localhost:3000/api/notes/:id" -H "Content-Type: application/json" -H "Authorization: Bearer <Token>" -d '{"title": "Updated Note", "content": "This note has been updated."}'
+curl -X PUT "https://mushy-bathing-suit-foal.cyclic.app/api/notes/:id" -H "Content-Type: application/json" -H "Authorization: Bearer <Token>" -d '{"title": "Updated Note", "content": "This note has been updated."}'
 ```
 
-Replace `:id` with the actual ID of the note you want to update.
+Replace `:id` with the actual ISBN of the book you want to update.
 
-### Delete a Note by ID
+### Deleting a book
 
 ```bash
-curl -X DELETE -H "Authorization: Bearer <access_token>" http://localhost:5000/api/books/:id
+curl -X DELETE -H "Authorization: Bearer <access_token>" https://mushy-bathing-suit-foal.cyclic.app/api/books/:id
 ```
 
-Replace `:id` with the actual ID of the note you want to delete.
+Replace `:id` with the actual ISBN of the book you want to delete.
 
 ## Allowed Users
 
