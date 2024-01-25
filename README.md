@@ -62,10 +62,10 @@ Bookstore_Management_API/
 
 To set up the application locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/saikrishnayadav764/notes-app.git`
-2. Install dependencies: `npm install`
-3. Configure environment variables: Create a .env file and define DB_URI = "mongodb+srv://naruto:naruto@cluster0.be644zi.mongodb.net/db?retryWrites=true&w=majority"
-4. Start the server: `npm start`
+1. Clone the repository: `git clone https://github.com/saikrishnayadav764/Bookstore_Management_API.git`
+2. Install dependencies: `pip install -r requirements.txt`
+3. Configure environment variables: Create a .env file and define MONGO_URI = "mongodb+srv://naruto:naruto@cluster0.be644zi.mongodb.net/db"
+4. Start the server: `python run.py`
 
 ## Usage
 
