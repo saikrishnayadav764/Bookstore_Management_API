@@ -1,6 +1,6 @@
 # Notes Application
 
-The Notes Application is a Node.js-based system designed to manage and store notes securely. It offers functionalities to create, read, update, and delete notes via a RESTful API.
+The Bookstore Management Application is a Flask-based system designed to manage and store books securely. It offers functionalities to create, read, update, and delete books via a RESTful API.
 
 ## Table of Contents
 
@@ -19,44 +19,44 @@ The Notes Application is a Node.js-based system designed to manage and store not
 
 ## Introduction
 
-The Notes Application is a built using Node.js and Express.js, designed to facilitate efficient note-taking functionalities. Leveraging MongoDB for data storage, it allows users to manage notes through a RESTful API while ensuring data security.
+The Bookstore Management Application is a built using Python and Flask, designed to facilitate efficient books-taking functionalities. Leveraging MongoDB for data storage, it allows users to manage notes through a RESTful API while ensuring data security.
 
 ## Features
 
-- **Create, Read, Update, Delete (CRUD) Operations**: Provides API endpoints to perform CRUD operations on notes.
-- **User Authentication**: Implements user authentication using JSON Web Tokens (JWT) to secure API routes.
+- Add new books to the database.
+- Retrieve all books or a specific book by ISBN.
+- Update book details.
+- Delete books from the database.
+- Basic authentication to restrict access to certain endpoints.
+- Unit tests for API endpoints.
+- JWT token-based authentication (Bonus feature).
 
 ## Folder Structure
 
 The application follows a well-organized folder structure:
 
 ```
-notes-app/
+Bookstore_Management_API/
 │
-├── controllers/
-│   ├── authController.js
-│   └── notesController.js
+├── app/
+│   ├── __init__.py
+│   ├── models.py
+│   ├── routes.py
+│   ├── auth.py
+│   └── tests/
+│       ├── __init__.py
+│       └── test_routes.py
 │
-├── models/
-│   └── Note.js
-│
-├── routes/
-│   ├── authRoutes.js
-│   └── notesRoutes.js
-│
-├── tests/
-│   └── notes.test.js
-│
-├── app.js
-└── .env
+├── config.py
+├── requirements.txt
+└── run.py
 ```
 
-- **controllers**: Contains controller logic for authentication and notes.
-- **models**: Defines the schema for the Note model.
-- **routes**: Handles API endpoints for authentication and notes.
+- **models**: Defines the schema for the Book model.
+- **routes**: Handles API endpoints for authentication and books.
 - **tests**: Includes test files for endpoint testing.
-- **app.js**: Main entry point of the application.
-- **.env**: Stores environment variables such as database credentials and tokens.
+- **run.py**: Main entry point of the application.
+- **config.py**: Stores configuration such as database credentials.
 
 ## Installation
 
@@ -69,17 +69,17 @@ To set up the application locally, follow these steps:
 
 ## Usage
 
-The server starts at http://localhost:3000 by running `npm start`. Once the server is running, you can access the defined API endpoints.
+The server starts at http://localhost:5000 by running `npm start`. Once the server is running, you can access the defined API endpoints.
 
 ## API Endpoints
 
-### Notes
+### Books
 
-- **GET /api/notes**: Retrieve all notes.
-- **GET /api/notes/:id**: Retrieve a specific note by ID.
-- **POST /api/notes**: Create a new note.
-- **PUT /api/notes/:id**: Update a note by ID.
-- **DELETE /api/notes/:id**: Delete a note by ID.
+- **POST /api/books**: Add a new book.
+- **GET /api/books**: Retrieve all books.
+- **GET /api/books/<ISBN>**: Retrieve a specific book by ISBN.
+- **PUT /api/books/<ISBN>**: Update book details.
+- **DELETE /api/books/<ISBN>**: Delete a book.
 
 ### Authentication
 
@@ -100,19 +100,19 @@ Replace `username` and `password` with the credentials of the allowed users.
 ### Create a Note
 
 ```bash
-curl -X POST "http://localhost:3000/api/notes" -H "Content-Type: application/json" -H "Authorization: Bearer <Token>" -d '{"title": "New Note", "content": "This is a new note."}'
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <access_token>" -d '{"title": "Book Title", "author": "Author Name", "ISBN": "1234567890", "price": 10.99, "quantity": 5}' http://localhost:5000/api/books
 ```
 
 ### Get All Notes
 
 ```bash
-curl -X GET "http://localhost:3000/api/notes" -H "Authorization: Bearer <Token>"
+curl -X GET -H "Authorization: Bearer <access_token>" http://localhost:5000/api/books
 ```
 
 ### Get a Specific Note by ID
 
 ```bash
-curl -X GET "http://localhost:3000/api/notes/:id" -H "Authorization: Bearer <Token>"
+curl -X GET -H "Authorization: Bearer <access_token>" http://localhost:5000/api/books/:id
 ```
 
 Replace `:id` with the actual ID of the note you want to retrieve.
@@ -128,7 +128,7 @@ Replace `:id` with the actual ID of the note you want to update.
 ### Delete a Note by ID
 
 ```bash
-curl -X DELETE "http://localhost:3000/api/notes/:id" -H "Authorization: Bearer <Token>"
+curl -X DELETE -H "Authorization: Bearer <access_token>" http://localhost:5000/api/books/:id
 ```
 
 Replace `:id` with the actual ID of the note you want to delete.
@@ -137,22 +137,22 @@ Replace `:id` with the actual ID of the note you want to delete.
 
 The application allows the following users to authenticate:
 
-- Username: user1, Password: password1
-- Username: user2, Password: password2
+- username: admin, password: admin
 
 ## Testing
 
-The application includes comprehensive test suites to validate the implemented functionalities. To run the tests, use the command `npm test`.
+The application includes comprehensive test suites to validate the implemented functionalities. To run the tests, use the command `python -m unittest`.
 
 ## Technologies Used
 
-- Node.js
-- Express.js
-- MongoDB
-- Mongoose
-- JSON Web Tokens (JWT)
+- Python 3.x
+- Flask
+- Flask JWT Extended
+- Flask PyMongo
+- PyJWT
+- PyMongo (for MongoDB)
 
 ## Deployed Link
 
-https://puce-aggressive-anemone.cyclic.app/api/notes
+[https://mushy-bathing-suit-foal.cyclic.app/api/books]
 
