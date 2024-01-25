@@ -92,7 +92,7 @@ Execute these `curl` commands in your terminal to interact with the API endpoint
 ### Obtain Token (Login)
 
 ```bash
-curl -X POST "https://mushy-bathing-suit-foal.cyclic.app/api/login" -H "Content-Type: application/json" -d "{\"username\": \"user1\", \"password\": \"password1\"}"
+curl -X POST -H "Content-Type: application/json" -d "{\"username\": \"admin\", \"password\": \"admin\"}" https://mushy-bathing-suit-foal.cyclic.app/api/login
 ```
 
 Replace `username` and `password` with the credentials of the allowed users.
