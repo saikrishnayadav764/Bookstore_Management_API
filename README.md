@@ -70,7 +70,7 @@ To set up the application locally, follow these steps:
 
 ## Usage
 
-The server starts at http://localhost:5000 by running `npm start`. Once the server is running, you can access the defined API endpoints.
+The server starts at http://localhost:5000 by running `python run.py`. Once the server is running, you can access the defined API endpoints.
 
 ## API Endpoints
 
