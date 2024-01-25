@@ -1,4 +1,4 @@
-# Notes Application
+# Bookstore Management Application
 
 The Bookstore Management Application is a Flask-based system designed to manage and store books securely. It offers functionalities to create, read, update, and delete books via a RESTful API.
 
