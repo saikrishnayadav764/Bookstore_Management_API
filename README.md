@@ -63,9 +63,10 @@ Bookstore_Management_API/
 To set up the application locally, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/saikrishnayadav764/Bookstore_Management_API.git`
-2. Install dependencies: `pip install -r requirements.txt`
-3. Configure variables: MONGO_URI = "mongodb+srv://naruto:naruto@cluster0.be644zi.mongodb.net/db"
-4. Start the server: `python run.py`
+2. Change Directory: `cd Bookstore_Management_API-main`
+3. Install dependencies: `pip install -r requirements.txt`
+4. Configure variables: MONGO_URI = "mongodb+srv://naruto:naruto@cluster0.be644zi.mongodb.net/db"
+5. Start the server: `python run.py`
 
 ## Usage
 
