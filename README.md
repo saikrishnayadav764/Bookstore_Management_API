@@ -19,7 +19,7 @@ The Bookstore Management Application is a Flask-based system designed to manage 
 
 ## Introduction
 
-The Bookstore Management Application is a built using Python and Flask, designed to facilitate efficient books-taking functionalities. Leveraging MongoDB for data storage, it allows users to manage notes through a RESTful API while ensuring data security.
+The Bookstore Management Application is a built using Python and Flask, designed to facilitate efficient books-taking functionalities. Leveraging MongoDB for data storage, it allows users to manage books through a RESTful API while ensuring data security.
 
 ## Features
 
