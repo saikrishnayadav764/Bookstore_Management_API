@@ -95,7 +95,7 @@ Execute these `curl` commands in your terminal to interact with the API endpoint
 
 To import the Bookstore Management API collection into Postman, follow these steps:
 
-1. Download the Postman collection file by clicking [here](link_to_your_collection_file).
+1. Download the Postman collection file by clicking [here](https://github.com/saikrishnayadav764/Bookstore_Management_API/blob/main/Bookstore.postman_collection.json).
 2. Open Postman.
 3. Click on the "Import" button in the top left corner of the window.
 4. In the dialog that appears, click on the "Upload Files" tab.
