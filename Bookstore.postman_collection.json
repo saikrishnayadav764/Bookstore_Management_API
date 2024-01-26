@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "dc7e3327-5db5-415a-b829-072eb444473c",
+		"name": "Bookstore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "21858876"
+	},
+	"item": [
+		{
+			"name": "Getting Access Token",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://mushy-bathing-suit-foal.cyclic.app/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Adding a new book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNjI0NzUyOCwianRpIjoiMjA5ZWFjZGItNzBiNC00OGJhLWFiNzktMGRhZTRiYzU4ZTE2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzA2MjQ3NTI4LCJjc3JmIjoiNWUyM2Y0OTgtMDUzMS00NDc0LTk3NTUtNmY1YjZiODRmNTg3IiwiZXhwIjoxNzA4ODM5NTI4fQ.Vhc91i7h0KTFK9V7aF-POXuUkMPCVHvq8R9A1tVycS8"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"New Book\",\r\n    \"author\": \"New Author\",\r\n    \"ISBN\": \"1234567890\",\r\n    \"price\": 10.99,\r\n    \"quantity\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://mushy-bathing-suit-foal.cyclic.app/api/books"
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieving all books",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNjI0NzUyOCwianRpIjoiMjA5ZWFjZGItNzBiNC00OGJhLWFiNzktMGRhZTRiYzU4ZTE2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzA2MjQ3NTI4LCJjc3JmIjoiNWUyM2Y0OTgtMDUzMS00NDc0LTk3NTUtNmY1YjZiODRmNTg3IiwiZXhwIjoxNzA4ODM5NTI4fQ.Vhc91i7h0KTFK9V7aF-POXuUkMPCVHvq8R9A1tVycS8"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://mushy-bathing-suit-foal.cyclic.app/api/books"
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieving a specific book by ISBN",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNjI0NzUyOCwianRpIjoiMjA5ZWFjZGItNzBiNC00OGJhLWFiNzktMGRhZTRiYzU4ZTE2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzA2MjQ3NTI4LCJjc3JmIjoiNWUyM2Y0OTgtMDUzMS00NDc0LTk3NTUtNmY1YjZiODRmNTg3IiwiZXhwIjoxNzA4ODM5NTI4fQ.Vhc91i7h0KTFK9V7aF-POXuUkMPCVHvq8R9A1tVycS8"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://mushy-bathing-suit-foal.cyclic.app/api/books/1234567890"
+			},
+			"response": []
+		},
+		{
+			"name": "Updating book details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNjI0NzUyOCwianRpIjoiMjA5ZWFjZGItNzBiNC00OGJhLWFiNzktMGRhZTRiYzU4ZTE2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzA2MjQ3NTI4LCJjc3JmIjoiNWUyM2Y0OTgtMDUzMS00NDc0LTk3NTUtNmY1YjZiODRmNTg3IiwiZXhwIjoxNzA4ODM5NTI4fQ.Vhc91i7h0KTFK9V7aF-POXuUkMPCVHvq8R9A1tVycS8"
+					}
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Updated Title\",\r\n    \"author\": \"Updated Author\",\r\n    \"price\": 12.99,\r\n    \"quantity\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://mushy-bathing-suit-foal.cyclic.app/api/books/1234567890"
+			},
+			"response": []
+		},
+		{
+			"name": "Deleting a book",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNjI0NzUyOCwianRpIjoiMjA5ZWFjZGItNzBiNC00OGJhLWFiNzktMGRhZTRiYzU4ZTE2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNzA2MjQ3NTI4LCJjc3JmIjoiNWUyM2Y0OTgtMDUzMS00NDc0LTk3NTUtNmY1YjZiODRmNTg3IiwiZXhwIjoxNzA4ODM5NTI4fQ.Vhc91i7h0KTFK9V7aF-POXuUkMPCVHvq8R9A1tVycS8"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "https://mushy-bathing-suit-foal.cyclic.app/api/books/1234567890"
+			},
+			"response": []
+		}
+	]
+}
