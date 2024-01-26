@@ -91,19 +91,6 @@ The server starts at http://localhost:5000 by running `python run.py`. Once the 
 
 Execute these `curl` commands in your terminal to interact with the API endpoints:
 
-## Importing the Postman Collection
-
-To import the Bookstore Management API collection into Postman, follow these steps:
-
-1. Download the Postman collection file by clicking [here](https://github.com/saikrishnayadav764/Bookstore_Management_API/blob/main/Bookstore.postman_collection.json).
-2. Open Postman.
-3. Click on the "Import" button in the top left corner of the window.
-4. In the dialog that appears, click on the "Upload Files" tab.
-5. Select the downloaded collection file (`.json` format) from your computer.
-6. Once the file is uploaded, click on the "Import" button to import the collection into Postman.
-
-After importing the collection, you'll be able to see all the API endpoints along with example requests and responses. You can then use these requests to interact with the Bookstore Management API directly from Postman.
-
 ### Obtain Token (Login)
 
 ```bash
@@ -148,6 +135,19 @@ curl -X DELETE -H "Authorization: Bearer <access_token>" https://mushy-bathing-s
 ```
 
 Replace `:id` with the actual ISBN of the book you want to delete.
+
+## Importing the Postman Collection
+
+To import the Bookstore Management API collection into Postman, follow these steps:
+
+1. Download the Postman collection file by clicking [here](https://github.com/saikrishnayadav764/Bookstore_Management_API/blob/main/Bookstore.postman_collection.json).
+2. Open Postman.
+3. Click on the "Import" button in the top left corner of the window.
+4. In the dialog that appears, click on the "Upload Files" tab.
+5. Select the downloaded collection file (`.json` format) from your computer.
+6. Once the file is uploaded, click on the "Import" button to import the collection into Postman.
+
+After importing the collection, you'll be able to see all the API endpoints along with example requests and responses. You can then use these requests to interact with the Bookstore Management API directly from Postman.
 
 ## Allowed Users
 
