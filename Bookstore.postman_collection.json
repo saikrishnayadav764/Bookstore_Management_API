@@ -40,7 +40,7 @@
 						}
 					}
 				},
-				"url": "https://mushy-bathing-suit-foal.cyclic.app/api/login"
+				"url": "https://angry-pear-swordfish.cyclic.app/api/login"
 			},
 			"response": []
 		},
@@ -70,7 +70,7 @@
 						}
 					}
 				},
-				"url": "https://mushy-bathing-suit-foal.cyclic.app/api/books"
+				"url": "https://angry-pear-swordfish.cyclic.app/api/books"
 			},
 			"response": []
 		},
@@ -85,7 +85,7 @@
 				},
 				"method": "GET",
 				"header": [],
-				"url": "https://mushy-bathing-suit-foal.cyclic.app/api/books"
+				"url": "https://angry-pear-swordfish.cyclic.app/api/books"
 			},
 			"response": []
 		},
@@ -100,7 +100,7 @@
 				},
 				"method": "GET",
 				"header": [],
-				"url": "https://mushy-bathing-suit-foal.cyclic.app/api/books/1234567890"
+				"url": "https://angry-pear-swordfish.cyclic.app/api/books/1234567890"
 			},
 			"response": []
 		},
@@ -130,7 +130,7 @@
 						}
 					}
 				},
-				"url": "https://mushy-bathing-suit-foal.cyclic.app/api/books/1234567890"
+				"url": "https://angry-pear-swordfish.cyclic.app/api/books/1234567890"
 			},
 			"response": []
 		},
@@ -156,7 +156,7 @@
 				},
 				"method": "DELETE",
 				"header": [],
-				"url": "https://mushy-bathing-suit-foal.cyclic.app/api/books/1234567890"
+				"url": "https://angry-pear-swordfish.cyclic.app/api/books/1234567890"
 			},
 			"response": []
 		}
