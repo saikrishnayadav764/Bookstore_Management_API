@@ -170,5 +170,5 @@ The application includes comprehensive test suites to validate the implemented f
 
 ## Deployed Link
 
-[https://mushy-bathing-suit-foal.cyclic.app/api/books]
+[https://angry-pear-swordfish.cyclic.app/api/books]
 
