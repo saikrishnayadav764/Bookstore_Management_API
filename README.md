@@ -94,7 +94,7 @@ Execute these `curl` commands in your terminal to interact with the API endpoint
 ### Obtain Token (Login)
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -d "{\"username\": \"admin\", \"password\": \"admin\"}" https://mushy-bathing-suit-foal.cyclic.app/api/login
+curl -X POST -H "Content-Type: application/json" -d "{\"username\": \"admin\", \"password\": \"admin\"}" https://angry-pear-swordfish.cyclic.app/api/login
 ```
 
 Replace `username` and `password` with the credentials of the allowed users.
@@ -102,19 +102,19 @@ Replace `username` and `password` with the credentials of the allowed users.
 ### Adding a new book
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <access_token>" -d "{\"title\": \"Book Title\", \"author\": \"Author Name\", \"ISBN\": \"1234567890\", \"price\": 10.99, \"quantity\": 5}" https://mushy-bathing-suit-foal.cyclic.app/api/books
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <access_token>" -d "{\"title\": \"Book Title\", \"author\": \"Author Name\", \"ISBN\": \"1234567890\", \"price\": 10.99, \"quantity\": 5}" https://angry-pear-swordfish.cyclic.app/api/books
 ```
 
 ### Retrieving all books
 
 ```bash
-curl -X GET -H "Authorization: Bearer <access_token>" https://mushy-bathing-suit-foal.cyclic.app/api/books
+curl -X GET -H "Authorization: Bearer <access_token>" https://angry-pear-swordfish.cyclic.app/api/books
 ```
 
 ### Retrieving a specific book by ISBN
 
 ```bash
-curl -X GET -H "Authorization: Bearer <access_token>" https://mushy-bathing-suit-foal.cyclic.app/api/books/:id
+curl -X GET -H "Authorization: Bearer <access_token>" https://angry-pear-swordfish.cyclic.app/api/books/:id
 ```
 
 Replace `:id` with the actual ISBN of the book you want to retrieve.
@@ -122,7 +122,7 @@ Replace `:id` with the actual ISBN of the book you want to retrieve.
 ### Updating book details
 
 ```bash
-curl -X PUT -H "Content-Type: application/json" -H "Authorization: Bearer <access_token>" -d "{\"title\": \"Updated Title\", \"author\": \"Updated Author\", \"price\": 12.99, \"quantity\": 10}" https://mushy-bathing-suit-foal.cyclic.app/api/books/:id
+curl -X PUT -H "Content-Type: application/json" -H "Authorization: Bearer <access_token>" -d "{\"title\": \"Updated Title\", \"author\": \"Updated Author\", \"price\": 12.99, \"quantity\": 10}" https://angry-pear-swordfish.cyclic.app/api/books/:id
 
 ```
 
@@ -131,7 +131,7 @@ Replace `:id` with the actual ISBN of the book you want to update.
 ### Deleting a book
 
 ```bash
-curl -X DELETE -H "Authorization: Bearer <access_token>" https://mushy-bathing-suit-foal.cyclic.app/api/books/:id
+curl -X DELETE -H "Authorization: Bearer <access_token>" https://angry-pear-swordfish.cyclic.app/api/books/:id
 ```
 
 Replace `:id` with the actual ISBN of the book you want to delete.
