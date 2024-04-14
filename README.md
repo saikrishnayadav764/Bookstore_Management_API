@@ -1,6 +1,6 @@
-# Bookstore Management Application
+# Travel Diary Platform Applicatio
 
-The Bookstore Management Application is a Flask-based system designed to manage and store books securely. It offers functionalities to create, read, update, and delete books via a RESTful API.
+Travel Diary Platform Application is a Node-based system designed to manage and store travel entries securely. It offers functionalities to create, read, update, and delete travel entries via a RESTful API.
 
 ## Table of Contents
 
